@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreManager</title>
+    <style>
+     body {
+      background-color: #f8f8f8;
+      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+     }
+
+     h1 {
+        color: brown;
+        text-align: center;
+        margin-top: 50px;
+     }
+
+     table {
+        font-size: 16px;
+        color: #555;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        width: 100%;
+        margin-top: 30px;
+     }
+
+     th,
+     td {
+        padding: 10px;
+        text-align: left;
+     }
+
+     th {
+        background-color: #ccc;
+        font-weight: bold;
+        text-transform: uppercase;
+     }
+
+     td:nth-child(even) {
+        background-color: #f2f2f2;
+     }
+
+     td:nth-child(odd) {
+        background-color: #fff;
+     }
+
+     td {
+        border-bottom: 1px solid #ccc;
+     }
+
+     td:nth-child(4),
+     th:nth-child(4) {
+        width: 200px;
+     }
+
+     td:nth-child(5),
+     th:nth-child(5) {
+        width: 120px;
+        text-align: right;
+     }
+
+     a {
+        color: #1e90ff;
+        text-decoration: none;
+     }
+
+     a:hover {
+        text-decoration: underline;
+     }
+
+     .bandeira {
+        height: 60px;
+        margin-right: 30px;
+     }
+
+     .bandeira {
+  position: relative;
+}
+
+.bandeira {
+  position: relative;
+}
+
+.bandeira::after {
+  content: attr(data-nacionalidade);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Adicione uma transição suave para suavizar o efeito */
+}
+
+.bandeira:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+    </style>
+  </head>
+<body>
+  <h1>ScoreManager</h1> 
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Posição</th>
+        <th>Idade</th>
+        <th>Atletica</th>
+        <th>Valor de mercado</th>
+        <th>Jogos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="pagina_jogador1.html">Lionel Messi</a></td>
+        <td>Atacante</td>
+        <td>34</td>
+        <td data-nacionalidade="Argentina"><img src="https://static.significados.com.br/foto/argentina.jpg" alt="Argentina" class="bandeira" data-nacionalidade="Argentina">
+        <td>€120 milhões</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <td><a href="pagina_jogador1.html">Cristiano Ronaldo</a></td>
+        <td>Atacante</td>
+        <td>36</td>
+        <td data-nacionalidade="Argentina"><img src="https://s1.static.brasilescola.uol.com.br/be/2022/10/bandeira-portugal-2.jpg" alt="Argentina" class="bandeira" data-nacionalidade="Portugal">
+        <td>€100 milhões</td>
+        <td>60</td>
+      </tr>
+      <td><a href="pagina_jogador1.html">Kayo Rabelo</a></td>
+        <td>Atacante</td>
+        <td>36</td>
+        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TndcrQaBGdcAX9QUr6s&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCW3059PXvpMHaZDnrlpFztOgHp0oByxvJSiprjNP8Atg&oe=643F65CB" alt="Argentina" class="bandeira" data-nacionalidade="UFBA">
+        <td>€100 milhões</td>
+        <td>60</td>
+      </tr>
+      <!-- Adicione mais linhas conforme necessário -->
+    </tbody>
+  </table>
+</body>
+</html>
+  <div id="area" > 
+   Histórico 
+    
+  </div> 
+
+  <script>
+  window.alert("Bem vindo ao ScoreManager!");
+
+  function showNacionalidade(event) {
+        const bandeira = event.target;
+        const nacionalidade = bandeira.getAttribute("data-nacionalidade");
+        bandeira.setAttribute("title", nacionalidade);
+    }
+
+    // Adicionar eventos de mouseover para todas as bandeiras
+    const bandeiras = document.querySelectorAll(".bandeira");
+    bandeiras.forEach(bandeira => {
+        bandeira.addEventListener("mouseover", showNacionalidade);
+    });
+
+  </script>
+</body>
+</html>

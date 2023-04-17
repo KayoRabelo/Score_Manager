@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liga Interna de Futsal da UFBA</title>
+    <style>
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo do cabeçalho */
+        #header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    height: 200px; /* Altura desejada para o cabeçalho */
+}
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        /* Estilo da tabela zebrada */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #1e90ff;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e0e0e0;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            padding: 10px;
+            background-color: #1e90ff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Liga Interna de Futsal da UFBA</h1>
+        <div class="logo">
+            <img src="https://via.placeholder.com/100" alt="Logo da Liga de Futsal">
+        </div>
+    </header>
+    <h2>Dados Estatísticos da Temporada</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Partidas Jogadas</th>
+                <th>Partidas Vencidas</th>
+                <th>Partidas Empatadas</th>
+                <th>Partidas Perdidas</th>
+                <th>Gols Marcados</th>
+                <th>Gols Sofridos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://127.0.0.1:5500/aula04/Atletica_Pitbull.html" target="_blank">Atlética Pitbulls</a></td>
+                <td>10</td>
+                <td>10</td>
+                <td>7</td>
+                <td>1</td>
+                <td>2</td>
+                <td>20</td>
+                
+            </tr>
+            <tr>
+                <td><a href="http://127.0.0.1:5500/aula04/Atletica_Pitbull.html" target="_blank">Atlética Civil UFBA</a></td>
+                <td>10</td>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>18</td>
+                <td>12</td>
+            </tr>
+            <!-- Adicione mais linhas de acordo com a quantidade de times na liga -->
+            <!-- Adicione os botões abaixo da tabela dentro do elemento tbody -->
+<tbody>
+    <tr>
+        
+        </td>
+    </tr>
+    <tr>
+        <!-- Adicione linhas similares para os outros times -->
+    </tr>
+</tbody>
+<script>
+    // Array com URLs das imagens de fundo
+var backgroundImages = [
+    'https://wallpapercave.com/wp/wp2567635.jpg',
+    'https://wallpapercave.com/wp/wp2567607.jpg',
+    'https://wallpapercave.com/wp/wp2567630.jpg',
+    // Adicione mais URLs de imagens aqui
+];
+
+// Função para obter um índice aleatório do array de imagens
+function getRandomIndex(max) {
+    return Math.floor(Math.random() * max);
+}
+
+// Seleciona um índice aleatório do array de imagens
+var randomIndex = getRandomIndex(backgroundImages.length);
+
+// Define a imagem de fundo no cabeçalho usando o índice aleatório
+document.getElementById('header').style.backgroundImage = 'url(' + backgroundImages[randomIndex] + ')';
+
+    
+</script>
+
+        </tbody>
+    </table>
+    <footer>
+        <p>Desenvolvido por [Kayo Rabelo] &copy; 2023. Todos os direitos reservados.</p>
+        <p><a href="https://www.example.com" target="_blank">www.example.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tela de Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* Definir a imagem de fundo */
+      background-image: url('http://1.bp.blogspot.com/-mKHwtS5NqTE/Usl6Sv4PJ7I/AAAAAAABIfg/KR_Yrw47qgk/s1600/barradao-2.jpg');
+      /* Definir o tamanho da imagem de fundo */
+      background-size: cover;
+      /* Definir outras propriedades de estilo para o fundo */
+      /* background-repeat, background-position, etc. */
+    }
+
+    .login-container {
+      width: 300px;
+      margin: 100px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Estilo para o botão de envio do formulário */
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #ffffff;
+    }
+
+    /* Estilo para o botão de cadastro */
+    button[type="button"] {
+      background-color: #28a745;
+    }
+
+    /* Estilo para o texto de placeholder nos campos de entrada */
+    input::placeholder {
+      color: #aaa;
+    }
+
+    /* Estilo para o link de esqueceu a senha */
+    .forgot-password {
+      display: block;
+      text-align: right;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* Estilo para o link de esqueceu a senha em hover */
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+          <input type="text" name="username" placeholder="Nome de usuário">
+          <input type="password" name="password" placeholder="Senha">
+          <button type="submit" id="loginButton">Entrar</button>
+          <button type="button" id="signupButton">Cadastrar</button>
+        </form>
+        <a href="#" class="forgot-password">Esqueceu a senha?</a>
+        <script>
+          document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementsByName("username")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+    
+            // Realizar a validação dos campos de entrada (exemplo)
+            if (username === "usuario" && password === "senha") {
+              // Redirecionar para a página de destino após o login ser bem sucedido
+              window.location.href = "http://127.0.0.1:5500/aula04/LigaInternaUfba.html";
+            } else {
+              // Exibir mensagem de erro ou executar ação apropriada
+             
+              alert("Nome de usuário ou senha incorretos.");
+            }
+          });
+          
+          document.getElementById("signupButton").addEventListener("click", function() {
+            // Redirecionar para a página de cadastro
+            window.location.href = "TelaDeCadastro.html";
+          });
+        </script>
+    </body>
+    </html>
+
+        
+
