@@ -123,6 +123,16 @@
                 <td>18</td>
                 <td>12</td>
             </tr>
+
+            <tr>
+                <td><a href="http://127.0.0.1:5500/aula04/Atletica_Pitbull.html" target="_blank">Atlética Medicina UFBA</a></td>
+                <td>9</td>
+                <td>3</td>
+                <td>6</td>
+                <td>4</td>
+                <td>43</td>
+                <td>52</td>
+            </tr>
             <!-- Adicione mais linhas de acordo com a quantidade de times na liga -->
             <!-- Adicione os botões abaixo da tabela dentro do elemento tbody -->
 <tbody>
@@ -153,6 +163,49 @@ var randomIndex = getRandomIndex(backgroundImages.length);
 
 // Define a imagem de fundo no cabeçalho usando o índice aleatório
 document.getElementById('header').style.backgroundImage = 'url(' + backgroundImages[randomIndex] + ')';
+
+
+
+
+
+
+    const table = document.querySelector('table');
+    let sortDirection = 'descendente';
+
+    function sortTable(columnIndex) {
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+
+        rows.sort((rowA, rowB) => {
+            const cellA = rowA.querySelectorAll('td')[columnIndex];
+            const cellB = rowB.querySelectorAll('td')[columnIndex];
+
+            const valueA = parseInt(cellA.textContent);
+            const valueB = parseInt(cellB.textContent);
+
+            if (sortDirection === 'ascendente') {
+                return valueA - valueB;
+            } else {
+                return valueB - valueA;
+            }
+        });
+
+        tbody.innerHTML = '';
+        rows.forEach(row => tbody.appendChild(row));
+    }
+
+    table.querySelectorAll('th').forEach((headerCell, columnIndex) => {
+        headerCell.addEventListener('click', () => {
+            if (sortDirection === 'ascendente') {
+                sortDirection = 'descendente';
+            } else {
+                sortDirection = 'ascendente';
+            }
+            sortTable(columnIndex);
+        });
+    });
+
+
 
     
 </script>

@@ -7,7 +7,7 @@
     <title>ScoreManager</title>
     <style>
 body {
-  background-image: url('https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325776307_854044355860995_6196463041916421628_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=rSB1PPjlL94AX9DQxcm&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCjwVtv9YjNHXnDK6GHh8tMg-MaDfZsSg1TSrq06Ci8rA&oe=64406F21'); /* Substitua pelo caminho da imagem que você deseja usar */
+  background-image: url('https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325776307_854044355860995_6196463041916421628_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=S0li5PoUghkAX8AKjpr&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCppIP5EbHxE5MRs4l4Nro0v1lQLZCo_4Ro3SYSEaEGnA&oe=64523B61'); /* Substitua pelo caminho da imagem que você deseja usar */
   background-repeat: no-repeat;
   background-size: cover; /* Faz com que a imagem cubra toda a página */
   background-position: center center;
@@ -113,10 +113,46 @@ body {
   visibility: visible;
 }
 
+nav {
+  background-color: #333;
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #1e90ff;
+}
+
     </style>
   </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="Sala_Trofeus.html">títulos</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="Calendario_Jogos.html">Calendário</a></li>
+    </ul>
+  </nav>
   <h1>Atlética Pitbulls</h1> 
+  <div style="height: 300px; overflow-y: scroll;">
   <table>
     <thead>
       <tr>
@@ -133,7 +169,7 @@ body {
         <td><a href="pagina_jogador1.html">Lionel Messi</a></td>
         <td>Atacante</td>
         <td>34</td>
-        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TndcrQaBGdcAX9QUr6s&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCW3059PXvpMHaZDnrlpFztOgHp0oByxvJSiprjNP8Atg&oe=643F65CB" alt="Argentina" class="bandeira" data-nacionalidade="UFBA" alt="Argentina" class="bandeira" data-nacionalidade="Argentina">
+        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=aWlvM3sUVykAX-QZfUU&_nc_ht=scontent.fssa13-1.fna&oh=00_AfBFooPcpoqqxpoKyp3zYltwVnr7JjBnja1FmweqnL3szg&oe=644D3D8B" alt="Argentina" class="bandeira" data-nacionalidade="UFBA" alt="Argentina" class="bandeira" data-nacionalidade="Argentina">
         <td>€120 milhões</td>
         <td>23</td>
       </tr>
@@ -141,17 +177,28 @@ body {
         <td><a href="pagina_jogador1.html">Cristiano Ronaldo</a></td>
         <td>Atacante</td>
         <td>36</td>
-        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TndcrQaBGdcAX9QUr6s&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCW3059PXvpMHaZDnrlpFztOgHp0oByxvJSiprjNP8Atg&oe=643F65CB" alt="Argentina" class="bandeira" data-nacionalidade="UFBA" alt="Argentina" class="bandeira" data-nacionalidade="Portugal">
+        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=aWlvM3sUVykAX-QZfUU&_nc_ht=scontent.fssa13-1.fna&oh=00_AfBFooPcpoqqxpoKyp3zYltwVnr7JjBnja1FmweqnL3szg&oe=644D3D8B" alt="Argentina" class="bandeira" data-nacionalidade="UFBA" alt="Argentina" class="bandeira" data-nacionalidade="Portugal">
         <td>€100 milhões</td>
         <td>60</td>
       </tr>
       <td><a href="pagina_jogador1.html">Kayo Rabelo</a></td>
         <td>Atacante</td>
         <td>36</td>
-        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TndcrQaBGdcAX9QUr6s&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCW3059PXvpMHaZDnrlpFztOgHp0oByxvJSiprjNP8Atg&oe=643F65CB" alt="Argentina" class="bandeira" data-nacionalidade="UFBA">
+        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=aWlvM3sUVykAX-QZfUU&_nc_ht=scontent.fssa13-1.fna&oh=00_AfBFooPcpoqqxpoKyp3zYltwVnr7JjBnja1FmweqnL3szg&oe=644D3D8B" alt="Argentina" class="bandeira" data-nacionalidade="UFBA">
         <td>€100 milhões</td>
         <td>60</td>
       </tr>
+
+      <td><a href="pagina_jogador1.html">Kayo Rabelo</a></td>
+        <td>Atacante</td>
+        <td>36</td>
+        <td data-nacionalidade="Argentina"><img src="https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325905654_690537909233539_4606268537311514102_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=aWlvM3sUVykAX-QZfUU&_nc_ht=scontent.fssa13-1.fna&oh=00_AfBFooPcpoqqxpoKyp3zYltwVnr7JjBnja1FmweqnL3szg&oe=644D3D8B" alt="Argentina" class="bandeira" data-nacionalidade="UFBA">
+        <td>€100 milhões</td>
+        <td>60</td>
+      </tr>
+    
+        
+      
       <!-- Adicione mais linhas conforme necessário -->
     </tbody>
   </table>

@@ -7,17 +7,18 @@
     <style>
         /* Reset de margem e padding para o corpo da página */
         body {
-            color: #333;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /* Altere de min-height para height para garantir que o body ocupe toda a altura da viewport */
-            height: 100%;
-            background-image: url('https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325776307_854044355860995_6196463041916421628_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=rSB1PPjlL94AX9DQxcm&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCjwVtv9YjNHXnDK6GHh8tMg-MaDfZsSg1TSrq06Ci8rA&oe=64406F21'); /* Substitua com o caminho da sua imagem de fundo */
-            background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área */
-            background-position: center center; /* Centraliza a imagem na horizontal e vertical */
-            background-repeat: no-repeat; /* Impede que a imagem se repita */
-        }
+  background-image: url('https://scontent.fssa13-1.fna.fbcdn.net/v/t39.30808-6/325776307_854044355860995_6196463041916421628_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=81ilbDZ--B8AX8o0uZ-&_nc_ht=scontent.fssa13-1.fna&oh=00_AfCXJ97DsKFaj_mty3VA0tunW_g9Cf4QbwnpVf0gTxPZdg&oe=644C4CA1'); /* Substitua pelo caminho da imagem que você deseja usar */
+  background-repeat: no-repeat;
+  background-size: cover; /* Faz com que a imagem cubra toda a página */
+  background-position: center center;
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 200;
+  padding: 0;
+  /* Adicione as seguintes propriedades para garantir que a imagem cubra toda a página */
+  min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport */
+}
 
         /* Container principal com espaçamento e alinhamento centralizados */
         .container {
@@ -27,7 +28,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f1f1f1;
+            
+          
+            
         }
 
         /* Estilo para a imagem de jogador */
@@ -37,6 +40,7 @@
             overflow: hidden;
             background-image: url(https://i.pinimg.com/564x/3e/4e/31/3e4e31269a50d0e3f10c3fbc96bd4b1d.jpg);
             background-size: cover;
+            
         }
 
         /* Estilo para o título */
