@@ -4,66 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tabela de Jogos do Time X</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 50px auto;
-  width: 80%;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-th {
-  background-color: #ddd;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #f2f2f2;
-}
-
-tbody tr:hover {
-  background-color: #e5e5e5;
-}
-
-.lost-home {
-    color: red;
-}
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-  <header>
-    <h1>Tabela de Jogos do Time X</h1>
+  <header class="bg-dark text-white text-center py-4">
+    <h1 class="display-4">Tabela de Jogos do Time X</h1>
   </header>
-  <main>
-    <table id="tabela-jogos">
-      <thead>
+  <main class="container py-4">
+    <table class="table">
+      <thead class="table-dark">
         <tr>
           <th>Data</th>
           <th>Adversário</th>
@@ -91,47 +40,37 @@ tbody tr:hover {
           <td>7 x 6</td>
         </tr>
         <tr>
-            <td>15/05/2023</td>
-            <td>Time W</td>
-            <td>Complexo Esportivo da UFBA</td>
-            <td>-</td>
-          </tr>
+          <td>15/05/2023</td>
+          <td>Time W</td>
+          <td>Complexo Esportivo da UFBA</td>
+          <td>-</td>
+        </tr>
       </tbody>
     </table>
   </main>
   <script src="script.js"></script>
   <script>
+    const tabelaJogos = document.querySelector('table');
+    const resultados = tabelaJogos.querySelectorAll('td:nth-child(4)');
 
-
-const tabelaJogos = document.getElementById('tabela-jogos');
-const resultados = tabelaJogos.querySelectorAll('td:nth-child(4)');
-
-resultados.forEach(resultado => {
-  if (resultado.textContent === '-') {
-    resultado.style.fontWeight = 'bold';
-    resultado.style.color = '#ccc';
-  } else if (resultado.textContent.includes('x')) {
-    const gols = resultado.textContent.split('x');
-    if (parseInt(gols[0]) > parseInt(gols[1])) {
-      resultado.style.color = 'green';
-    } else if (parseInt(gols[0]) < parseInt(gols[1])) {
-      resultado.style.color = 'red';
-    } else {
-      resultado.style.color = 'gray';
-    }
-    if (parseInt(gols[0]) < parseInt(gols[1])) {
-      resultado.style.color = 'red';
-    }
-  }
-});
-
-
-
-
-
-
-
-
+    resultados.forEach(resultado => {
+      if (resultado.textContent === '-') {
+        resultado.style.fontWeight = 'bold';
+        resultado.style.color = '#ccc';
+      } else if (resultado.textContent.includes('x')) {
+        const gols = resultado.textContent.split('x');
+        if (parseInt(gols[0]) > parseInt(gols[1])) {
+          resultado.style.color = 'green';
+        } else if (parseInt(gols[0]) < parseInt(gols[1])) {
+          resultado.style.color = 'red';
+        } else {
+          resultado.style.color = 'gray';
+        }
+        if (parseInt(gols[0]) < parseInt(gols[1])) {
+          resultado.style.color = 'red';
+        }
+      }
+    });
   </script>
 </body>
 </html>

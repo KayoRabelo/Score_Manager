@@ -13,12 +13,12 @@
 
         /* Estilo do cabeçalho */
         #header {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
-    height: 200px; /* Altura desejada para o cabeçalho */
-}
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 20px;
+            height: 200px; /* Altura desejada para o cabeçalho */
+        }
 
         h1 {
             text-align: center;
@@ -63,6 +63,37 @@
             background-color: #e0e0e0;
         }
 
+      
+
+        .artilheiros-table {
+        width: 70%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .artilheiros-table th {
+        background-color: #333;
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .artilheiros-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+    }
+
+    .artilheiros-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .artilheiros-table tr:hover {
+        background-color: #e0e0e0;
+    }
+
+
         /* Estilo do rodapé */
         footer {
             text-align: center;
@@ -80,7 +111,7 @@
             color: #fff;
             text-decoration: none;
         }
-        
+</style>
     </style>
 </head>
 <body>
@@ -90,7 +121,7 @@
             <img src="https://via.placeholder.com/100" alt="Logo da Liga de Futsal">
         </div>
     </header>
-    <h2>Dados Estatísticos da Temporada</h2>
+    <h2>Classificação</h2>
     <table>
         <thead>
             <tr>
@@ -136,6 +167,8 @@
             <!-- Adicione mais linhas de acordo com a quantidade de times na liga -->
             <!-- Adicione os botões abaixo da tabela dentro do elemento tbody -->
 <tbody>
+
+
     <tr>
         
         </td>
@@ -143,6 +176,31 @@
     <tr>
         <!-- Adicione linhas similares para os outros times -->
     </tr>
+
+
+
+</table>
+
+<h2>Artilheiros</h2>
+<table class="artilheiros-table">
+    <thead>
+        <tr>
+            <th>Jogador</th>
+            <th>Gols</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Nome do Jogador 1</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Nome do Jogador 2</td>
+            <td>8</td>
+        </tr>
+        <!-- Adicione mais linhas para outros artilheiros -->
+    </tbody>
+</table>
 </tbody>
 <script>
     // Array com URLs das imagens de fundo
